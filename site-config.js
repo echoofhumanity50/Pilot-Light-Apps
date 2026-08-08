@@ -3,5 +3,5 @@
   Keep the quotation marks around each link.
 */
 window.PILOT_LIGHT_CONFIG = {
-  donationUrl: "https://www.buymeacoffee.com/YOURNAME"
+  donationUrl: "https://buymeacoffee.com/capto50z"
 };
