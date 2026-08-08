@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pilot Light Apps creates simple, useful Windows software. Download Wallpaper Pilot and support continued development.">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="Pilot Light Apps">
+  <meta property="og:description" content="Simple software that quietly does its job.">
+  <meta property="og:type" content="website">
+  <title>Pilot Light Apps</title>
+  <link rel="icon" href="assets/pilot-light-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#apps">Skip to apps</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Pilot Light Apps home">
+      <img src="assets/pilot-light-logo.svg" alt="" width="44" height="44">
+      <span>Pilot Light Apps</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#apps">Apps</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent software</p>
+        <h1>Simple tools that quietly do their job.</h1>
+        <p class="hero-text">Useful Windows apps without subscriptions, unnecessary accounts, or clutter. Download them free and support development only when you choose.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#apps">Explore the apps</a>
+          <a class="button secondary donation-link" href="#support">Support development</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">
+        <img src="assets/pilot-light-logo.svg" alt="">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Our software</p>
+          <h2>Apps</h2>
+        </div>
+        <p>New tools will appear here as they are released.</p>
+      </div>
+      <div id="app-grid" class="app-grid" aria-live="polite"></div>
+      <noscript>
+        <p class="notice">JavaScript is required to display the app list.</p>
+      </noscript>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div>
+        <p class="eyebrow">Why Pilot Light</p>
+        <h2>Software should help without getting in the way.</h2>
+      </div>
+      <div class="about-copy">
+        <p>Pilot Light Apps builds focused tools for everyday problems. The goal is not to trap people in subscriptions or collect unnecessary data. It is to make useful software, keep it understandable, and improve it through real user feedback.</p>
+        <div class="principles">
+          <article>
+            <span>01</span>
+            <h3>Useful first</h3>
+            <p>Every feature should solve a real problem.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Private by default</h3>
+            <p>Your local files stay on your computer.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Optional support</h3>
+            <p>Downloads are free; donations help fund updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-section" id="support">
+      <div class="support-card">
+        <div>
+          <p class="eyebrow">Keep the light on</p>
+          <h2>Support independent development</h2>
+          <p>Donations are optional. They help cover development time, testing, future updates, and new apps.</p>
+        </div>
+        <a class="button primary donation-link" href="#" data-placeholder-link="donation">Buy me a coffee</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/pilot-light-logo.svg" alt="" width="34" height="34">
+      <div>
+        <strong>Pilot Light Apps</strong>
+        <span>Simple software. Optional support.</span>
+      </div>
+    </div>
+    <p>© <span id="year"></span> Pilot Light Apps.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="site-config.js"></script>
+  <script src="apps.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
