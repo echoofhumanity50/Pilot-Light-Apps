@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Wallpaper Pilot interface preview</title>
+  <desc id="desc">A stylized preview of a Windows wallpaper management application.</desc>
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d3650"/><stop offset="1" stop-color="#0c1c2d"/></linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4ba8e8"/><stop offset=".6" stop-color="#174b72"/><stop offset="1" stop-color="#0a1b2a"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-opacity=".38"/></filter>
+  </defs>
+  <rect x="45" y="38" width="810" height="540" rx="28" fill="url(#frame)" stroke="#6688a3" stroke-opacity=".35" stroke-width="3" filter="url(#shadow)"/>
+  <circle cx="82" cy="74" r="7" fill="#ff7979"/><circle cx="106" cy="74" r="7" fill="#f6ca58"/><circle cx="130" cy="74" r="7" fill="#69d18b"/>
+  <text x="170" y="82" fill="#d9e7f2" font-family="Segoe UI,Arial" font-size="25" font-weight="700">Wallpaper Pilot</text>
+  <rect x="72" y="112" width="245" height="430" rx="16" fill="#0b1b2a" stroke="#7891a5" stroke-opacity=".22"/>
+  <text x="95" y="150" fill="#7dc9ff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">WALLPAPER FOLDERS</text>
+  <g fill="#d5e2ec" font-family="Segoe UI,Arial" font-size="18">
+    <text x="98" y="192">Nature</text><text x="98" y="235">Cities</text><text x="98" y="278">Space</text><text x="98" y="321">Favorites</text>
+  </g>
+  <rect x="92" y="166" width="198" height="42" rx="9" fill="#173852"/>
+  <text x="107" y="193" fill="#f5fbff" font-family="Segoe UI,Arial" font-size="18">Nature</text>
+  <rect x="92" y="367" width="198" height="56" rx="11" fill="#16344f"/>
+  <text x="108" y="391" fill="#9fb4c5" font-family="Segoe UI,Arial" font-size="13">CHANGE EVERY</text>
+  <text x="108" y="411" fill="#f2f8fc" font-family="Segoe UI,Arial" font-size="17">15 minutes</text>
+  <rect x="92" y="441" width="198" height="48" rx="11" fill="#63bdfc"/>
+  <text x="148" y="472" fill="#06101c" font-family="Segoe UI,Arial" font-size="18" font-weight="700">Next wallpaper</text>
+  <rect x="344" y="112" width="484" height="342" rx="16" fill="url(#sky)"/>
+  <circle cx="706" cy="198" r="46" fill="#e6f5ff" opacity=".85"/>
+  <path d="M344 369L453 235l85 98 72-66 218 187H344z" fill="#163d5a"/><path d="M344 410l150-113 90 85 68-53 176 125H344z" fill="#0c2a40"/>
+  <path d="M551 454l38-90 35 90z" fill="#e6f6ff" opacity=".65"/>
+  <rect x="344" y="474" width="484" height="68" rx="14" fill="#0b1b2a" stroke="#7891a5" stroke-opacity=".18"/>
+  <text x="368" y="502" fill="#f0f7fc" font-family="Segoe UI,Arial" font-size="18" font-weight="700">mountain-lake-4k.jpg</text>
+  <text x="368" y="526" fill="#8fa8bb" font-family="Segoe UI,Arial" font-size="14">3840 × 2160  •  Nature  •  Recently shown</text>
+  <path d="M778 496l7 14 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z" fill="#72c5ff"/>
+</svg>
