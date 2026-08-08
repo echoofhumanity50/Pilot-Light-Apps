@@ -9,7 +9,7 @@
 window.PILOT_LIGHT_APPS = [
   {
     name: "Wallpaper Pilot",
-    status: "Coming soon",
+    status: "Available",
     platform: "Windows desktop",
     tagline: "A smarter way to rotate the wallpaper collection you already own.",
     description: "Wallpaper Pilot gives you control over automatic wallpaper changes while keeping everything local on your computer.",
@@ -21,10 +21,12 @@ window.PILOT_LIGHT_APPS = [
       "Favorites and disliked images",
       "History, previews and quick apply",
       "Minimize to the system tray",
-      "Optional start with Windows"
+      "Persistent anti-repeat shuffle",
+      "Optional GitHub update notifications",
+      "Two-choice uninstall and optional start with Windows"
     ],
-    image: "assets/wallpaper-pilot-preview.svg",
-    downloadUrl: "https://github.com/YOURNAME/WallpaperPilot/releases/latest",
+    image: "assets/wallpaper-pilot-screenshot.png",
+    downloadUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/latest/download/Wallpaper-Pilot.exe",
     learnMoreUrl: "#"
   }
 ];
