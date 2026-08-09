@@ -245,6 +245,33 @@ p { color: var(--muted); }
   box-shadow: 0 0 12px rgba(97,186,255,.7);
 }
 .app-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.download-notice {
+  margin-top: 1.15rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(112, 196, 255, .2);
+  border-radius: 14px;
+  background: rgba(6, 18, 31, .45);
+}
+.download-notice h4 {
+  margin: 0 0 .45rem;
+  color: #edf6ff;
+  font-size: .96rem;
+  letter-spacing: -.01em;
+}
+.download-notice p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.55;
+}
+.download-notice a {
+  display: inline-block;
+  margin-top: .65rem;
+  color: var(--accent-2);
+  font-size: .84rem;
+  font-weight: 750;
+}
+.download-notice a:hover { color: #fff; }
 
 .about-section {
   display: grid;

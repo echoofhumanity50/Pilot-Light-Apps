@@ -6,7 +6,7 @@ A free static website designed for GitHub Pages. It starts with Wallpaper Pilot 
 
 - Website: `https://echoofhumanity50.github.io/Pilot-Light-Apps/`
 - Download: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/latest/download/Wallpaper-Pilot.exe`
-- Support: `https://buymeacoffee.com/capto50z`
+- Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
 - Screenshot: `assets/wallpaper-pilot-screenshot.png`
 

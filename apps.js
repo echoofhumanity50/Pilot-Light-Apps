@@ -27,6 +27,12 @@ window.PILOT_LIGHT_APPS = [
     ],
     image: "assets/wallpaper-pilot-screenshot.png",
     downloadUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/latest/download/Wallpaper-Pilot.exe",
+    downloadNotice: {
+      title: "Why Windows may show a warning",
+      text: "Wallpaper Pilot is a new, independently published app and is not yet digitally signed. Windows may show an unknown publisher or reputation warning. This means the app is not yet widely recognized; it is not a notification that malware was detected. Download only from this official page.",
+      detailsLabel: "View release details and SHA-256 fingerprint",
+      detailsUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/latest"
+    },
     learnMoreUrl: "#"
   }
 ];

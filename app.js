@@ -81,6 +81,30 @@
 
     copy.append(meta, title, tagline, description, features, actions);
 
+    if (app.downloadNotice) {
+      const notice = document.createElement("aside");
+      notice.className = "download-notice";
+
+      const noticeTitle = document.createElement("h4");
+      noticeTitle.textContent = safeText(app.downloadNotice.title);
+
+      const noticeText = document.createElement("p");
+      noticeText.textContent = safeText(app.downloadNotice.text);
+
+      notice.append(noticeTitle, noticeText);
+
+      if (!isPlaceholder(app.downloadNotice.detailsUrl)) {
+        const detailsLink = document.createElement("a");
+        detailsLink.href = app.downloadNotice.detailsUrl;
+        detailsLink.target = "_blank";
+        detailsLink.rel = "noopener noreferrer";
+        detailsLink.textContent = safeText(app.downloadNotice.detailsLabel || "View release details");
+        notice.appendChild(detailsLink);
+      }
+
+      copy.appendChild(notice);
+    }
+
     const visual = document.createElement("div");
     visual.className = "app-card-visual";
     const image = document.createElement("img");
