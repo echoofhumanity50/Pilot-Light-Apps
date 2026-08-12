@@ -133,5 +133,20 @@
     }
   });
 
+  document.querySelectorAll(".contact-link").forEach((link) => {
+    const email = safeText(config.contactEmail).trim();
+    if (!email || isPlaceholder(email) || !email.includes("@")) {
+      link.href = "#";
+      link.classList.add("disabled");
+      link.setAttribute("aria-disabled", "true");
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        showToast("The contact email will be added before launch.");
+      });
+    } else {
+      link.href = `mailto:${email}?subject=${encodeURIComponent("Pilot Light Apps inquiry")}`;
+    }
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

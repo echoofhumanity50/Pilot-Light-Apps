@@ -3,5 +3,6 @@
   Keep the quotation marks around each link.
 */
 window.PILOT_LIGHT_CONFIG = {
-  donationUrl: "https://buymeacoffee.com/capto50z"
+  donationUrl: "https://buymeacoffee.com/capto50z",
+  contactEmail: "support@pilotlightapps.com"
 };

@@ -4,7 +4,8 @@ A free static website designed for GitHub Pages. It starts with Wallpaper Pilot 
 
 ## Current public configuration
 
-- Website: `https://echoofhumanity50.github.io/Pilot-Light-Apps/`
+- Website: `https://pilotlightapps.com/`
+- Contact: `support@pilotlightapps.com`
 - Download: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/latest/download/Wallpaper-Pilot.exe`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
@@ -21,6 +22,7 @@ Open `apps.js`. Copy the Wallpaper Pilot object, paste it after the existing obj
 ## GitHub Pages configuration
 
 The repository publishes from the `main` branch and `/ (root)` folder.
+The custom domain is `pilotlightapps.com`; keep the `CNAME` file in the repository root.
 
 ## Preview on your computer
 
