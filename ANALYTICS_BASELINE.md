@@ -19,10 +19,25 @@ and before the Display / Audio Switcher testing build was linked publicly.
 ## Display / Audio Switcher testing build
 
 - Recorded: 2026-08-21 before publication
-- Planned GitHub tag: `display-audio-switcher-v0.9.0-testing`
+- GitHub tag: `display-audio-switcher-v0.9.0-testing`
 - Release asset: `DisplayAudioSwitcher-Windows.zip`
 - GitHub download count before publication: **0**
 - ZIP SHA-256: `76398A6595CAF830546D54640DEDBA001DB24C9A0C8E5F01D518A6D1A5A58557`
+
+## Release-verification traffic
+
+- Recorded: 2026-08-21 12:03 Central time
+- The testing release was published as a GitHub prerelease, not Latest.
+- GitHub reported the ZIP as 32,388,211 bytes with the same SHA-256 digest.
+- Pilot Light Apps downloaded the public ZIP once for release verification.
+- The downloaded file was 32,388,211 bytes, matched the recorded SHA-256, and
+  opened as a valid ZIP with 1,370 entries.
+- GitHub's asset API still reported a count of **0** immediately afterward; the
+  count may update later or may not count that verification client.
+- The live home and Privacy pages both contained the manual Cloudflare beacon.
+- Cloudflare still showed **0 visits / 0 page views** immediately after
+  publication. Analytics ingestion can lag, so later dashboard activity should
+  be compared with the zero-at-setup baseline rather than backdated.
 
 ## How to interpret the count
 
