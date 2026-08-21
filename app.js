@@ -49,9 +49,13 @@
     const badge = document.createElement("span");
     badge.className = "badge";
     badge.textContent = safeText(app.status);
+    const statusTone = safeText(app.statusTone).toLowerCase().replace(/[^a-z0-9-]/g, "");
+    if (statusTone) {
+      badge.classList.add(`badge-${statusTone}`);
+    }
     const platform = document.createElement("span");
     platform.className = "platform";
-    platform.textContent = safeText(app.platform);
+    platform.textContent = [app.platform, app.version].filter(Boolean).map(safeText).join(" · ");
     meta.append(badge, platform);
 
     const title = document.createElement("h3");
@@ -74,16 +78,20 @@
 
     const actions = document.createElement("div");
     actions.className = "app-actions";
-    actions.appendChild(makeButton("Download", app.downloadUrl));
+    actions.appendChild(makeButton(app.downloadLabel || "Download", app.downloadUrl));
     if (!isPlaceholder(app.learnMoreUrl)) {
       actions.appendChild(makeButton("Learn more", app.learnMoreUrl, "button secondary"));
     }
 
-    copy.append(meta, title, tagline, description, features, actions);
+    copy.append(meta, title, tagline, description, features);
 
     if (app.downloadNotice) {
       const notice = document.createElement("aside");
       notice.className = "download-notice";
+      const noticeTone = safeText(app.downloadNotice.tone).toLowerCase().replace(/[^a-z0-9-]/g, "");
+      if (noticeTone) {
+        notice.classList.add(`download-notice-${noticeTone}`);
+      }
 
       const noticeTitle = document.createElement("h4");
       noticeTitle.textContent = safeText(app.downloadNotice.title);
@@ -105,11 +113,13 @@
       copy.appendChild(notice);
     }
 
+    copy.appendChild(actions);
+
     const visual = document.createElement("div");
     visual.className = "app-card-visual";
     const image = document.createElement("img");
     image.src = safeText(app.image);
-    image.alt = `${safeText(app.name)} preview`;
+    image.alt = safeText(app.imageAlt || `${safeText(app.name)} preview`);
     visual.appendChild(image);
 
     article.append(copy, visual);
