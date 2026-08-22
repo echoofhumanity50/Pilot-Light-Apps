@@ -101,6 +101,28 @@
   know.appendChild(list(app.goodToKnow || [], "plain-list"));
   guides.append(setup, know);
 
+  const help = document.createElement("section");
+  help.className = "detail-section";
+  const helpHeading = document.createElement("div");
+  helpHeading.className = "detail-section-heading";
+  helpHeading.innerHTML = '<p class="eyebrow">Windows guides</p><h2>Start with the problem you are trying to solve.</h2>';
+  const helpGrid = document.createElement("div");
+  helpGrid.className = "guide-grid";
+  (app.guides || []).forEach((guide) => {
+    const card = document.createElement("a");
+    card.className = "guide-card";
+    card.href = safeText(guide.url);
+    const guideTitle = document.createElement("h3");
+    guideTitle.textContent = safeText(guide.title);
+    const guideDescription = document.createElement("p");
+    guideDescription.textContent = safeText(guide.description);
+    const guideLink = document.createElement("span");
+    guideLink.textContent = "Read guide →";
+    card.append(guideTitle, guideDescription, guideLink);
+    helpGrid.appendChild(card);
+  });
+  help.append(helpHeading, helpGrid);
+
   const cta = document.createElement("section");
   cta.className = "detail-cta";
   const ctaCopy = document.createElement("div");
@@ -112,5 +134,5 @@
   ctaCopy.append(ctaEyebrow, ctaTitle);
   cta.append(ctaCopy, externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
 
-  root.append(hero, notice, features, guides, cta);
+  root.append(hero, notice, features, guides, help, cta);
 })();

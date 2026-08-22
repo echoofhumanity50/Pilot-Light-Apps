@@ -39,6 +39,23 @@ window.PILOT_LIGHT_APPS = [
       "It asks Windows to apply one wallpaper; version 1.0.1 does not choose a different image or folder for each monitor.",
       "Uninstall can preserve or remove Wallpaper Pilot's saved data and never deletes your original wallpaper files."
     ],
+    guides: [
+      {
+        title: "Windows wallpaper switcher for a local collection",
+        description: "Compare the built-in Windows slideshow with a local switcher that remembers recent images.",
+        url: "windows-wallpaper-switcher.html"
+      },
+      {
+        title: "Stop Windows wallpaper from repeating",
+        description: "Practical checks and an anti-repeat option for collections that keep showing the same pictures.",
+        url: "stop-windows-wallpaper-repeating.html"
+      },
+      {
+        title: "Shuffle wallpaper folders and subfolders",
+        description: "Keep an organized collection intact while rotating images from nested folders.",
+        url: "shuffle-wallpaper-subfolders-windows.html"
+      }
+    ],
     image: "assets/wallpaper-pilot-screenshot.png",
     imageAlt: "Wallpaper Pilot application window with local-folder, shuffle, history, favorites, and tray controls",
     downloadLabel: "Download Wallpaper Pilot",
@@ -83,6 +100,23 @@ window.PILOT_LIGHT_APPS = [
       "All four display actions stay visible because they are Windows commands; this lets a profile turn a connected but currently disabled screen back on.",
       "Voicemeeter is optional and must be installed separately. The normal display and sound switching package is otherwise self-contained.",
       "If Start with Windows is enabled, turn it off before permanently moving or deleting the extracted folder."
+    ],
+    guides: [
+      {
+        title: "Windows display and audio switcher",
+        description: "Why Win+P only solves half the job and how a saved profile can change display and sound together.",
+        url: "windows-display-audio-switcher.html"
+      },
+      {
+        title: "Switch a PC between a monitor and TV",
+        description: "A repeatable monitor-to-TV setup for the screen mode and playback device you want.",
+        url: "switch-pc-monitor-tv-audio.html"
+      },
+      {
+        title: "Save Windows display and audio profiles",
+        description: "Turn a repeated multi-step setup into named profiles available from the system tray.",
+        url: "save-display-audio-profiles-windows.html"
+      }
     ],
     image: "assets/display-audio-switcher-screenshot.png",
     imageAlt: "Display and Audio Switcher showing connected displays, audio outputs, and three saved switching profiles",
