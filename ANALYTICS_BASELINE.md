@@ -72,6 +72,9 @@ links keep each app's GitHub asset count separate as the catalog expands.
   verification. It matched the recorded size and SHA-256, opened successfully,
   contained 1,385 entries under one `DisplayAudioSwitcher` folder, and included
   the executable and download README.
+- GitHub later reported the stable ZIP count as **1**, matching the identified
+  Pilot Light Apps verification download. Outside downloads therefore begin
+  above this count, subject to GitHub's normal counting limitations.
 - The redesigned site gives each app a dedicated URL. Compare page views for
   `/wallpaper-pilot.html` and `/display-audio-switcher.html` with the separate
   GitHub asset counts; do not describe the difference as a precise conversion
