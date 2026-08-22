@@ -10,11 +10,14 @@ repository receives only verified release candidates and finished releases.
 - Use app-specific tags so releases remain understandable as the catalog grows.
 - Existing Wallpaper Pilot tags `v1.0.0` and `v1.0.1` remain unchanged.
 - Future stable tag example: `wallpaper-pilot-v1.1.0`.
+- Display / Audio Switcher stable tag: `display-audio-switcher-v1.0.0`.
 - Testing tag example: `display-audio-switcher-v0.9.0-testing`.
 - Mark testing builds as GitHub prereleases and label them **Testing — not final**
   everywhere on the website.
 - Use a version-specific asset URL in `apps.js`; do not use a repository-wide
   `releases/latest/download/...` link on a multi-app website.
+- Keep each app's dedicated page URL stable for marketing and analytics. New apps
+  receive a compact home-directory card and their own HTML page.
 
 ## Required release assets
 

@@ -6,20 +6,20 @@
   let toastTimer;
 
   const isPlaceholder = (url = "") => !url || url === "#" || /YOURNAME|USERNAME|example\.com/i.test(url);
+  const safeText = (value) => String(value ?? "");
 
   const showToast = (message) => {
+    if (!toast) return;
     clearTimeout(toastTimer);
     toast.textContent = message;
     toast.classList.add("show");
     toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
   };
 
-  const safeText = (value) => String(value ?? "");
-
-  const makeButton = (label, url, classes = "button primary") => {
+  const makeButton = (label, url, classes = "button primary", external = true) => {
     const link = document.createElement("a");
     link.className = classes;
-    link.textContent = label;
+    link.textContent = safeText(label);
 
     if (isPlaceholder(url)) {
       link.href = "#";
@@ -31,100 +31,71 @@
       });
     } else {
       link.href = url;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
+      if (external) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
     }
     return link;
   };
 
-  apps.forEach((app) => {
-    const article = document.createElement("article");
-    article.className = "app-card";
+  if (grid) {
+    apps.forEach((app) => {
+      const article = document.createElement("article");
+      article.className = "catalog-card";
 
-    const copy = document.createElement("div");
-    copy.className = "app-card-copy";
+      const visualLink = document.createElement("a");
+      visualLink.className = "catalog-visual";
+      visualLink.href = app.pageUrl;
+      visualLink.setAttribute("aria-label", `View ${safeText(app.name)}`);
+      const image = document.createElement("img");
+      image.src = safeText(app.image);
+      image.alt = "";
+      visualLink.appendChild(image);
 
-    const meta = document.createElement("div");
-    meta.className = "app-meta";
-    const badge = document.createElement("span");
-    badge.className = "badge";
-    badge.textContent = safeText(app.status);
-    const statusTone = safeText(app.statusTone).toLowerCase().replace(/[^a-z0-9-]/g, "");
-    if (statusTone) {
-      badge.classList.add(`badge-${statusTone}`);
-    }
-    const platform = document.createElement("span");
-    platform.className = "platform";
-    platform.textContent = [app.platform, app.version].filter(Boolean).map(safeText).join(" · ");
-    meta.append(badge, platform);
+      const copy = document.createElement("div");
+      copy.className = "catalog-copy";
 
-    const title = document.createElement("h3");
-    title.textContent = safeText(app.name);
+      const meta = document.createElement("div");
+      meta.className = "app-meta";
+      const badge = document.createElement("span");
+      badge.className = "badge";
+      badge.textContent = safeText(app.status);
+      const statusTone = safeText(app.statusTone).toLowerCase().replace(/[^a-z0-9-]/g, "");
+      if (statusTone) badge.classList.add(`badge-${statusTone}`);
+      const platform = document.createElement("span");
+      platform.className = "platform";
+      platform.textContent = [app.platform, app.version].filter(Boolean).map(safeText).join(" · ");
+      meta.append(badge, platform);
 
-    const tagline = document.createElement("p");
-    tagline.className = "app-tagline";
-    tagline.textContent = safeText(app.tagline);
+      const title = document.createElement("h3");
+      const titleLink = document.createElement("a");
+      titleLink.href = app.pageUrl;
+      titleLink.textContent = safeText(app.name);
+      title.appendChild(titleLink);
 
-    const description = document.createElement("p");
-    description.textContent = safeText(app.description);
+      const tagline = document.createElement("p");
+      tagline.className = "app-tagline";
+      tagline.textContent = safeText(app.tagline);
 
-    const features = document.createElement("ul");
-    features.className = "feature-list";
-    (app.features || []).forEach((feature) => {
-      const item = document.createElement("li");
-      item.textContent = safeText(feature);
-      features.appendChild(item);
+      const highlights = document.createElement("ul");
+      highlights.className = "highlight-list";
+      (app.homeHighlights || []).forEach((highlight) => {
+        const item = document.createElement("li");
+        item.textContent = safeText(highlight);
+        highlights.appendChild(item);
+      });
+
+      const actions = document.createElement("div");
+      actions.className = "app-actions";
+      actions.appendChild(makeButton("View app", app.pageUrl, "button primary", false));
+      actions.appendChild(makeButton(app.shortDownloadLabel || "Download", app.downloadUrl, "button secondary"));
+
+      copy.append(meta, title, tagline, highlights, actions);
+      article.append(visualLink, copy);
+      grid.appendChild(article);
     });
-
-    const actions = document.createElement("div");
-    actions.className = "app-actions";
-    actions.appendChild(makeButton(app.downloadLabel || "Download", app.downloadUrl));
-    if (!isPlaceholder(app.learnMoreUrl)) {
-      actions.appendChild(makeButton("Learn more", app.learnMoreUrl, "button secondary"));
-    }
-
-    copy.append(meta, title, tagline, description, features);
-
-    if (app.downloadNotice) {
-      const notice = document.createElement("aside");
-      notice.className = "download-notice";
-      const noticeTone = safeText(app.downloadNotice.tone).toLowerCase().replace(/[^a-z0-9-]/g, "");
-      if (noticeTone) {
-        notice.classList.add(`download-notice-${noticeTone}`);
-      }
-
-      const noticeTitle = document.createElement("h4");
-      noticeTitle.textContent = safeText(app.downloadNotice.title);
-
-      const noticeText = document.createElement("p");
-      noticeText.textContent = safeText(app.downloadNotice.text);
-
-      notice.append(noticeTitle, noticeText);
-
-      if (!isPlaceholder(app.downloadNotice.detailsUrl)) {
-        const detailsLink = document.createElement("a");
-        detailsLink.href = app.downloadNotice.detailsUrl;
-        detailsLink.target = "_blank";
-        detailsLink.rel = "noopener noreferrer";
-        detailsLink.textContent = safeText(app.downloadNotice.detailsLabel || "View release details");
-        notice.appendChild(detailsLink);
-      }
-
-      copy.appendChild(notice);
-    }
-
-    copy.appendChild(actions);
-
-    const visual = document.createElement("div");
-    visual.className = "app-card-visual";
-    const image = document.createElement("img");
-    image.src = safeText(app.image);
-    image.alt = safeText(app.imageAlt || `${safeText(app.name)} preview`);
-    visual.appendChild(image);
-
-    article.append(copy, visual);
-    grid.appendChild(article);
-  });
+  }
 
   document.querySelectorAll(".donation-link").forEach((link) => {
     const url = config.donationUrl;
@@ -158,5 +129,6 @@
     }
   });
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 })();

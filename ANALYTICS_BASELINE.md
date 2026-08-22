@@ -54,3 +54,25 @@ separately from outside downloads.
 Cloudflare Web Analytics and GitHub download counts measure different actions and
 should not be treated as an exact conversion funnel. Version-specific website
 links keep each app's GitHub asset count separate as the catalog expands.
+
+## Stable switcher launch and catalog-page baseline
+
+- Recorded: 2026-08-22 before the redesigned website was published.
+- Cloudflare Web Analytics showed **0 visits / 0 page views** for the last 24
+  hours. The site had been created about 20 hours earlier.
+- Wallpaper Pilot `v1.0.1` asset count: **6** downloads.
+- Display / Audio Switcher testing ZIP asset count: **3** downloads.
+- New stable tag: `display-audio-switcher-v1.0.0`.
+- Stable ZIP asset count immediately after publication and before verification:
+  **0** downloads.
+- Stable ZIP size: **32,874,724 bytes**.
+- Stable ZIP SHA-256:
+  `CA502F8EDD8263E0F447DC2E1FB1947554B23D3EA1FA7AEFBCD800F2E6D47766`.
+- Pilot Light Apps then downloaded the stable public ZIP once for release
+  verification. It matched the recorded size and SHA-256, opened successfully,
+  contained 1,385 entries under one `DisplayAudioSwitcher` folder, and included
+  the executable and download README.
+- The redesigned site gives each app a dedicated URL. Compare page views for
+  `/wallpaper-pilot.html` and `/display-audio-switcher.html` with the separate
+  GitHub asset counts; do not describe the difference as a precise conversion
+  rate or unique-user count.

@@ -7,12 +7,13 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 - Website: `https://pilotlightapps.com/`
 - Contact: `support@pilotlightapps.com`
 - Wallpaper Pilot 1.0.1: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe`
-- Display / Audio Switcher 0.9.0 testing build: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/display-audio-switcher-v0.9.0-testing/DisplayAudioSwitcher-Windows.zip`
+- Display / Audio Switcher 1.0.0: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
-- Display / Audio Switcher status: `Testing — not final`
+- Display / Audio Switcher status: `Available`
 - Screenshot: `assets/wallpaper-pilot-screenshot.png`
-- Switcher artwork: `assets/display-audio-switcher-icon.png`
+- Switcher screenshot: `assets/display-audio-switcher-screenshot.png`
+- Dedicated pages: `wallpaper-pilot.html` and `display-audio-switcher.html`
 
 The website uses version-specific GitHub release URLs. This prevents a release
 for one app from silently changing another app's Download button. When an app is
@@ -21,7 +22,11 @@ only that app's URL in `apps.js`.
 
 ## Add another app later
 
-Open `apps.js`. Copy the Wallpaper Pilot object, paste it after the existing object with a comma between them, and change its information. The site automatically creates another app card.
+Open `apps.js`. Copy an existing app object, give it a unique slug and page URL,
+and change its information. Copy one of the small dedicated HTML page shells and
+set its `data-app-slug` to the same slug. The home directory and full app page
+both render from the shared data, so future additions do not turn the homepage
+into one long product page.
 
 Follow `RELEASE_MANAGEMENT.md` for tag names, testing labels, checksums, public
 verification, analytics baselines, and the final status change from testing to
