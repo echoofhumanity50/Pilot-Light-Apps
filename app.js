@@ -90,6 +90,9 @@
       actions.className = "app-actions";
       actions.appendChild(makeButton("View app", app.pageUrl, "button primary", false));
       actions.appendChild(makeButton(app.shortDownloadLabel || "Download", app.downloadUrl, "button secondary"));
+      if (app.itchUrl) {
+        actions.appendChild(makeButton(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
+      }
 
       copy.append(meta, title, tagline, highlights, actions);
       article.append(visualLink, copy);

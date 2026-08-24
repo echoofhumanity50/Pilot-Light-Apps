@@ -79,3 +79,35 @@ links keep each app's GitHub asset count separate as the catalog expands.
   `/wallpaper-pilot.html` and `/display-audio-switcher.html` with the separate
   GitHub asset counts; do not describe the difference as a precise conversion
   rate or unique-user count.
+
+## August 24 search and distribution checkpoint
+
+- Google Search Console showed **4 impressions, 1 click, 25% CTR, and an
+  average position of 6.3**. Two impressions and the click were attributed to
+  `https://pilotlightapps.com/`; two impressions were attributed to the old
+  `http://www.pilotlightapps.com/` form, which redirects to the canonical site.
+- The submitted sitemap was successful, was last read August 23, and reported
+  **10 discovered pages**.
+- Cloudflare Web Analytics still showed **0 visits / 0 page views** for the
+  prior seven days. The live homepage contained the expected beacon and token
+  with no browser-console error, so the disagreement with the Search Console
+  click is recorded rather than resolved by assumption. Possible explanations
+  include blocked analytics, low-volume reporting behavior, or ingestion delay.
+- Wallpaper Pilot `v1.0.1` remained at **6** recorded asset downloads: one above
+  the August 21 baseline, with source and uniqueness unknown.
+- Display / Audio Switcher `v1.0.0` remained at **1** recorded ZIP download,
+  matching the identified Pilot Light Apps verification download. No outside
+  Switcher download is confirmed yet.
+- Public discovery expanded on August 24 with a Pilot Light Apps profile post,
+  a Developer-tagged r/windowsapps post for Display / Audio Switcher, and public
+  itch.io pages for both apps:
+  - `https://www.reddit.com/user/Visible-Current-3909/comments/1vx9c1r/display_audio_switcher_100_a_free_windows/`
+  - `https://www.reddit.com/r/windowsapps/comments/1vx9ciu/display_audio_switcher_100_switch_a_windows/`
+  - `https://echoofhumanity50.itch.io/wallpaper-pilot`
+  - `https://echoofhumanity50.itch.io/display-audio-switcher`
+- These publications happened after the download counts above were recorded.
+  Check later activity against the existing **6** Wallpaper Pilot and **1**
+  Switcher baselines rather than attributing earlier counts to these channels.
+- Support-email routing was intentionally deferred while app and project inboxes
+  are consolidated separately. No Gmail, Cloudflare Email Routing, or DNS change
+  is part of this distribution checkpoint.

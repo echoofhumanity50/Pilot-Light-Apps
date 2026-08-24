@@ -53,10 +53,11 @@
   description.textContent = safeText(app.description);
   const actions = document.createElement("div");
   actions.className = "hero-actions";
-  actions.append(
-    externalLink(app.downloadLabel, app.downloadUrl, "button primary"),
-    externalLink(app.downloadNotice.detailsLabel, app.downloadNotice.detailsUrl, "button secondary")
-  );
+  actions.append(externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
+  if (app.itchUrl) {
+    actions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
+  }
+  actions.append(externalLink(app.downloadNotice.detailsLabel, app.downloadNotice.detailsUrl, "button secondary"));
   copy.append(back, meta, title, tagline, description, actions);
 
   const visual = document.createElement("div");
@@ -132,7 +133,13 @@
   const ctaTitle = document.createElement("h2");
   ctaTitle.textContent = `Ready to try ${safeText(app.name)}?`;
   ctaCopy.append(ctaEyebrow, ctaTitle);
-  cta.append(ctaCopy, externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
+  const ctaActions = document.createElement("div");
+  ctaActions.className = "detail-cta-actions";
+  ctaActions.append(externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
+  if (app.itchUrl) {
+    ctaActions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
+  }
+  cta.append(ctaCopy, ctaActions);
 
   root.append(hero, notice, features, guides, help, cta);
 })();

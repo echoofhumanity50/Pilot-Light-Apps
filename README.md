@@ -7,7 +7,9 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 - Website: `https://pilotlightapps.com/`
 - Contact: `support@pilotlightapps.com`
 - Wallpaper Pilot 1.0.1: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe`
+- Wallpaper Pilot on itch.io: `https://echoofhumanity50.itch.io/wallpaper-pilot`
 - Display / Audio Switcher 1.0.0: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
+- Display / Audio Switcher on itch.io: `https://echoofhumanity50.itch.io/display-audio-switcher`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
 - Display / Audio Switcher status: `Available`
@@ -19,6 +21,10 @@ The website uses version-specific GitHub release URLs. This prevents a release
 for one app from silently changing another app's Download button. When an app is
 updated, publish its new release first, verify the uploaded asset, and then change
 only that app's URL in `apps.js`.
+
+GitHub remains the canonical direct-download and checksum source. Each app's
+itch.io page is a separate discovery and download option. Keep both links in the
+same app object so the homepage and dedicated page stay synchronized.
 
 ## Add another app later
 
