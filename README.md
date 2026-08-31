@@ -6,9 +6,9 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 
 - Website: `https://pilotlightapps.com/`
 - Contact: `support@pilotlightapps.com`
-- Wallpaper Pilot 1.0.1: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe`
+- Wallpaper Pilot 1.0.1: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe`
 - Wallpaper Pilot on itch.io: `https://echoofhumanity50.itch.io/wallpaper-pilot`
-- Display / Audio Switcher 1.0.0: `https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
+- Display / Audio Switcher 1.0.0: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
 - Display / Audio Switcher on itch.io: `https://echoofhumanity50.itch.io/display-audio-switcher`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
