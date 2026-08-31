@@ -60,14 +60,14 @@ window.PILOT_LIGHT_APPS = [
     imageAlt: "Wallpaper Pilot application window with local-folder, shuffle, history, favorites, and tray controls",
     downloadLabel: "Download Wallpaper Pilot",
     shortDownloadLabel: "Download 1.0.1",
-    downloadUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe",
     itchLabel: "Get it on itch.io",
     itchUrl: "https://echoofhumanity50.itch.io/wallpaper-pilot",
     downloadNotice: {
       title: "Why Windows may show a warning",
       text: "Wallpaper Pilot is independently published and is not yet digitally signed. Windows may show an unknown-publisher or reputation warning. This means the app is not yet widely recognized; it is not a notification that malware was detected. Download only from this official page.",
       detailsLabel: "View release details and SHA-256 fingerprint",
-      detailsUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/tag/v1.0.1"
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/v1.0.1"
     }
   },
   {
@@ -124,14 +124,14 @@ window.PILOT_LIGHT_APPS = [
     imageAlt: "Display and Audio Switcher showing connected displays, audio outputs, and three saved switching profiles",
     downloadLabel: "Download Display / Audio Switcher",
     shortDownloadLabel: "Download 1.0.0",
-    downloadUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip",
     itchLabel: "Get it on itch.io",
     itchUrl: "https://echoofhumanity50.itch.io/display-audio-switcher",
     downloadNotice: {
       title: "Portable ZIP and unsigned-app notice",
       text: "Extract the entire ZIP before running DisplayAudioSwitcher.exe and keep its folder together. This independently published app is not yet digitally signed, so Windows may show an unknown-publisher or reputation warning. Download only from this official page.",
       detailsLabel: "View release details and verify the ZIP checksum",
-      detailsUrl: "https://github.com/echoofhumanity50/Pilot-Light-Apps/releases/tag/display-audio-switcher-v1.0.0"
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/display-audio-switcher-v1.0.0"
     }
   }
 ];
